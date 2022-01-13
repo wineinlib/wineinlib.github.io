@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on et cetera</title>
+    <link>https://wineinlib.github.io/</link>
+    <description>Recent content in Introduction on et cetera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://wineinlib.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate and deploy website</title>
+      <link>https://wineinlib.github.io/posts/generate-and-deploy-website/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/posts/generate-and-deploy-website/</guid>
+      <description>Generate static website using Hugo #  prepare Hugo #  download binary or use a package management system
+create repo and add theme #  hugo new site my-blog # version control for original blog content git init # add theme repo as submodule git add submodule https://github.com/alex-shpak/hugo-book themes/hugo-book configuration #  baseURL = &amp;#39;https://wineinlib.github.io&amp;#39; languageCode = &amp;#39;en-us&amp;#39; title = &amp;#39;et cetera&amp;#39; theme = &amp;#39;hugo-book&amp;#39; # (Optional) Set this to true to enable &amp;#39;Last Modified by&amp;#39; date and git author # information on &amp;#39;doc&amp;#39; type pages.</description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://wineinlib.github.io/docs/tools/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/tools/git/</guid>
+      <description>submodule #  # add submodule git submodule add https://github.com/wineinlib/wineinlib.github.io.git public # sync git submodule update --init --recursive # remove rm -rf public rm -rf .git/modules/public git rm --cached public </description>
+    </item>
+    
+    <item>
+      <title>golang notes</title>
+      <link>https://wineinlib.github.io/docs/golang/golang-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/golang/golang-notes/</guid>
+      <description>execute commands in golang #  exec.Command() </description>
+    </item>
+    
+    <item>
+      <title>kube-scheduler</title>
+      <link>https://wineinlib.github.io/docs/kubernetes/scheduler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/kubernetes/scheduler/</guid>
+      <description>usage #  </description>
+    </item>
+    
+    <item>
+      <title>kubectl</title>
+      <link>https://wineinlib.github.io/docs/kubernetes/kubectl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/kubernetes/kubectl/</guid>
+      <description>usage #  </description>
+    </item>
+    
+    <item>
+      <title>linux commands</title>
+      <link>https://wineinlib.github.io/docs/linux/commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/linux/commands/</guid>
+      <description>ssh #  # specify port ssh -p 2200 scp #  sshpass #  </description>
+    </item>
+    
+    <item>
+      <title>linux notes</title>
+      <link>https://wineinlib.github.io/docs/linux/linux-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/linux/linux-notes/</guid>
+      <description>init system #  Ubuntu: use Systemd as default since 15.04 use upstart before
+# check init system used if which systemctl &amp;amp;&amp;gt;/dev/null then echo &amp;#34;init system: systemd&amp;#34; elif [[ &amp;#34;`ps -p1 | grep systemd &amp;amp;&amp;amp; echo systemd || echo upstart`&amp;#34; = &amp;#34;upstart&amp;#34; ]] then echo &amp;#34;init system: upstart&amp;#34; else echo &amp;#34;init system not supported (upstart and systemd supported)&amp;#34; exit 1 fi systemd #  upstart #  description &amp;quot;my-app&amp;quot;respawnconsole outputchdir ${app-dir}exec ${app-dir}/my-app --port=${port}</description>
+    </item>
+    
+    <item>
+      <title>rsync</title>
+      <link>https://wineinlib.github.io/docs/tools/rsync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/tools/rsync/</guid>
+      <description>user and group mapping #  rsync --numeric-ids --usermap=&amp;#34;0:1000000,10:1000010&amp;#34; --groupmap=&amp;#34;0:1000000,10:1000010&amp;#34; ... rsync over ssh #  rsync -e &amp;#39;ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no&amp;#39; ... </description>
+    </item>
+    
+  </channel>
+</rss>

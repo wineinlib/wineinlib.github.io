@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>static website on et cetera</title>
+    <link>https://wineinlib.github.io/tags/static-website/</link>
+    <description>Recent content in static website on et cetera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wineinlib.github.io/tags/static-website/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generate and deploy website</title>
+      <link>https://wineinlib.github.io/posts/generate-and-deploy-website/</link>
+      <pubDate>Thu, 13 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/posts/generate-and-deploy-website/</guid>
+      <description>Generate static website using Hugo #  prepare Hugo #  download binary or use a package management system
+create repo and add theme #  hugo new site my-blog # version control for original blog content git init # add theme repo as submodule git add submodule https://github.com/alex-shpak/hugo-book themes/hugo-book configuration #  baseURL = &amp;#39;https://wineinlib.github.io&amp;#39; languageCode = &amp;#39;en-us&amp;#39; title = &amp;#39;et cetera&amp;#39; theme = &amp;#39;hugo-book&amp;#39; # (Optional) Set this to true to enable &amp;#39;Last Modified by&amp;#39; date and git author # information on &amp;#39;doc&amp;#39; type pages.</description>
+    </item>
+    
+  </channel>
+</rss>

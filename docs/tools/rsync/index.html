@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="user and group mapping #  rsync --numeric-ids --usermap=&#34;0:1000000,10:1000010&#34; --groupmap=&#34;0:1000000,10:1000010&#34; ... rsync over ssh #  rsync -e &#39;ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no&#39; ... ">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="rsync" />
+<meta property="og:description" content="user and group mapping #  rsync --numeric-ids --usermap=&#34;0:1000000,10:1000010&#34; --groupmap=&#34;0:1000000,10:1000010&#34; ... rsync over ssh #  rsync -e &#39;ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no&#39; ... " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wineinlib.github.io/docs/tools/rsync/" /><meta property="article:section" content="docs" />
+
+<meta property="article:modified_time" content="2022-01-13T20:15:06+08:00" />
+
+<title>rsync | et cetera</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.b28bcdceb79a6399ca48b010df01b961fb756d50e93bf61c18621233fcc9c984.css" integrity="sha256-sovNzreaY5nKSLAQ3wG5Yft1bVDpO/YcGGISM/zJyYQ=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.993a0dde9e9b94ca88cd6030fa422290480cbb455cd9ae894927128f3c0be454.js" integrity="sha256-mToN3p6blMqIzWAw&#43;kIikEgMu0Vc2a6JSScSjzwL5FQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>et cetera</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Golang</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/golang/golang-notes/" class="">golang notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Linux</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/linux/commands/" class="">linux commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/linux/linux-notes/" class="">linux notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-87f45e72e9046a94302e37ea137e2a5c" class="toggle"  />
+    <label for="section-87f45e72e9046a94302e37ea137e2a5c" class="flex justify-between">
+      <a href="https://wineinlib.github.io/docs/kubernetes/" class="">Kubernetes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/kubernetes/scheduler/" class="">kube-scheduler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/kubernetes/kubectl/" class="">kubectl</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a432bb056edf769c9f15f6893988f152" class="toggle" checked />
+    <label for="section-a432bb056edf769c9f15f6893988f152" class="flex justify-between">
+      <a href="https://wineinlib.github.io/docs/tools/" class="">Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/tools/git/" class="">git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/tools/rsync/" class=" active">rsync</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>rsync</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user-and-group-mapping">user and group mapping</a></li>
+        <li><a href="#rsync-over-ssh">rsync over ssh</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h3 id="user-and-group-mapping">
+  user and group mapping
+  <a class="anchor" href="#user-and-group-mapping">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync --numeric-ids --usermap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0:1000000,10:1000010&#34;</span> --groupmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0:1000000,10:1000010&#34;</span> ...
+</code></pre></div><h3 id="rsync-over-ssh">
+  rsync over ssh
+  <a class="anchor" href="#rsync-over-ssh">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync -e <span style="color:#e6db74">&#39;ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no&#39;</span> ...
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/wineinlib/wineinlib.github.io/commit/453c2b56a9b4fb00b280c0bfbac57fae22223c89" title='Last modified by wineinlib | January 13, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>January 13, 2022</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments"><script src="https://utteranc.es/client.js"
+        repo="wineinlib/wineinlib.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#user-and-group-mapping">user and group mapping</a></li>
+        <li><a href="#rsync-over-ssh">rsync over ssh</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

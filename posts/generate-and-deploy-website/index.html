@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Generate static website using Hugo #  prepare Hugo #  download binary or use a package management system
+create repo and add theme #  hugo new site my-blog # version control for original blog content git init # add theme repo as submodule git add submodule https://github.com/alex-shpak/hugo-book themes/hugo-book configuration #  baseURL = &#39;https://wineinlib.github.io&#39; languageCode = &#39;en-us&#39; title = &#39;et cetera&#39; theme = &#39;hugo-book&#39; # (Optional) Set this to true to enable &#39;Last Modified by&#39; date and git author # information on &#39;doc&#39; type pages.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="Generate and deploy website" />
+<meta property="og:description" content="Generate static website using Hugo #  prepare Hugo #  download binary or use a package management system
+create repo and add theme #  hugo new site my-blog # version control for original blog content git init # add theme repo as submodule git add submodule https://github.com/alex-shpak/hugo-book themes/hugo-book configuration #  baseURL = &#39;https://wineinlib.github.io&#39; languageCode = &#39;en-us&#39; title = &#39;et cetera&#39; theme = &#39;hugo-book&#39; # (Optional) Set this to true to enable &#39;Last Modified by&#39; date and git author # information on &#39;doc&#39; type pages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wineinlib.github.io/posts/generate-and-deploy-website/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-01-13T20:15:06+08:00" />
+
+<title>Generate and deploy website | et cetera</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.b28bcdceb79a6399ca48b010df01b961fb756d50e93bf61c18621233fcc9c984.css" integrity="sha256-sovNzreaY5nKSLAQ3wG5Yft1bVDpO/YcGGISM/zJyYQ=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.993a0dde9e9b94ca88cd6030fa422290480cbb455cd9ae894927128f3c0be454.js" integrity="sha256-mToN3p6blMqIzWAw&#43;kIikEgMu0Vc2a6JSScSjzwL5FQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>et cetera</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Golang</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/golang/golang-notes/" class="">golang notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Linux</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/linux/commands/" class="">linux commands</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/linux/linux-notes/" class="">linux notes</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-87f45e72e9046a94302e37ea137e2a5c" class="toggle"  />
+    <label for="section-87f45e72e9046a94302e37ea137e2a5c" class="flex justify-between">
+      <a href="https://wineinlib.github.io/docs/kubernetes/" class="">Kubernetes</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/kubernetes/scheduler/" class="">kube-scheduler</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/kubernetes/kubectl/" class="">kubectl</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a432bb056edf769c9f15f6893988f152" class="toggle"  />
+    <label for="section-a432bb056edf769c9f15f6893988f152" class="flex justify-between">
+      <a href="https://wineinlib.github.io/docs/tools/" class="">Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/tools/git/" class="">git</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="https://wineinlib.github.io/docs/tools/rsync/" class="">rsync</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/" >
+        Blog
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Generate and deploy website</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#generate-static-website-using-hugo">Generate static website using Hugo</a>
+      <ul>
+        <li><a href="#prepare-hugo">prepare Hugo</a></li>
+        <li><a href="#create-repo-and-add-theme">create repo and add theme</a></li>
+        <li><a href="#configuration">configuration</a></li>
+        <li><a href="#generate-static-site-code">generate static site code</a></li>
+        <li><a href="#issues">issues</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy-website-with-github-pages">Deploy website with Github Pages</a></li>
+    <li><a href="#deploy-website-with-gitlab-pages">Deploy website with Gitlab Pages</a>
+      <ul>
+        <li><a href="#configuration-1">configuration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown">
+  <h1>
+    <a href="/posts/generate-and-deploy-website/">Generate and deploy website</a>
+  </h1>
+  
+  <h5>January 13, 2022</h5>
+
+
+
+  
+
+  
+  <div>
+    
+      <a href="/tags/static-website/">static website</a>, 
+      <a href="/tags/blog/">blog</a>, 
+      <a href="/tags/hugo/">hugo</a>, 
+      <a href="/tags/gitlab-pages/">gitlab pages</a>
+  </div>
+  
+
+
+
+<h2 id="generate-static-website-using-hugo">
+  Generate static website using Hugo
+  <a class="anchor" href="#generate-static-website-using-hugo">#</a>
+</h2>
+<h3 id="prepare-hugo">
+  prepare Hugo
+  <a class="anchor" href="#prepare-hugo">#</a>
+</h3>
+<p>download binary or use a package management system</p>
+<h3 id="create-repo-and-add-theme">
+  create repo and add theme
+  <a class="anchor" href="#create-repo-and-add-theme">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hugo new site my-blog
+
+
+<span style="color:#75715e"># version control for original blog content</span>
+git init
+
+<span style="color:#75715e"># add theme repo as submodule</span>
+git add submodule https://github.com/alex-shpak/hugo-book themes/hugo-book
+</code></pre></div><h3 id="configuration">
+  configuration
+  <a class="anchor" href="#configuration">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://wineinlib.github.io&#39;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;en-us&#39;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;et cetera&#39;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#39;hugo-book&#39;</span>
+
+
+<span style="color:#75715e"># (Optional) Set this to true to enable &#39;Last Modified by&#39; date and git author</span>
+<span style="color:#75715e">#  information on &#39;doc&#39; type pages.</span>
+<span style="color:#a6e22e">enableGitInfo</span> = <span style="color:#66d9ef">true</span>
+
+
+[<span style="color:#a6e22e">params</span>]
+  <span style="color:#75715e"># (Optional, default light) Sets color theme: light, dark or auto.</span>
+  <span style="color:#75715e"># Theme &#39;auto&#39; switches between dark and light modes based on browser/os preferences</span>
+  <span style="color:#a6e22e">BookTheme</span> = <span style="color:#e6db74">&#39;light&#39;</span>
+
+  <span style="color:#75715e"># (Optional, default true) Controls table of contents visibility on right side of pages.</span>
+  <span style="color:#75715e"># Start and end levels can be controlled with markup.tableOfContents setting.</span>
+  <span style="color:#75715e"># You can also specify this parameter per page in front matter.</span>
+  <span style="color:#a6e22e">BookToC</span> = <span style="color:#66d9ef">true</span>
+
+  <span style="color:#75715e"># Set source repository location.</span>
+  <span style="color:#75715e"># Used for &#39;Last Modified&#39; and &#39;Edit this page&#39; links.</span>
+  <span style="color:#a6e22e">BookRepo</span> = <span style="color:#e6db74">&#39;https://github.com/wineinlib/wineinlib.github.io&#39;</span>
+</code></pre></div><h3 id="generate-static-site-code">
+  generate static site code
+  <a class="anchor" href="#generate-static-site-code">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># for local debug</span>
+hugo server
+
+<span style="color:#75715e"># generate static website code</span>
+hugo
+
+<span style="color:#75715e"># version control for website code</span>
+cd public/
+git init
+</code></pre></div><h3 id="issues">
+  issues
+  <a class="anchor" href="#issues">#</a>
+</h3>
+<ol>
+<li>run <code>hugo</code> binary in <code>CentOS 7</code> reports</li>
+</ol>
+<pre tabindex="0"><code>hugo: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.20' not found (required by hugo)
+hugo: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by hugo)
+hugo: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.21' not found (required by hugo)
+</code></pre><p>root cause: libstdc++.so.6 version incompatible
+solution: update libstdc++.so.6</p>
+<p>ref: <a href="https://www.cnblogs.com/Jerryshome/p/15190252.html">https://www.cnblogs.com/Jerryshome/p/15190252.html</a></p>
+<ol start="2">
+<li>run <code>hugo</code> on Windows reports</li>
+</ol>
+<pre tabindex="0"><code>Error: Error building site: &quot;\content\_index.md:8:1&quot;: failed to extract shortcode: template for shortcode &quot;columns&quot; not found
+</code></pre><p>root cause: submodule not present
+solution: <code>git submodule update --init --recursive</code>
+note: the error is kind of misleading</p>
+<h2 id="deploy-website-with-github-pages">
+  Deploy website with Github Pages
+  <a class="anchor" href="#deploy-website-with-github-pages">#</a>
+</h2>
+<ol>
+<li>
+<p>create public repo for github pages, <code>github.com/wineinlib/wineinlib.github.io</code> in my case</p>
+</li>
+<li>
+<p>push website code to the repo</p>
+</li>
+<li>
+<p>configure the repo</p>
+</li>
+</ol>
+<h2 id="deploy-website-with-gitlab-pages">
+  Deploy website with Gitlab Pages
+  <a class="anchor" href="#deploy-website-with-gitlab-pages">#</a>
+</h2>
+<h3 id="configuration-1">
+  configuration
+  <a class="anchor" href="#configuration-1">#</a>
+</h3>
+<p>example: <a href="https://gitlab.com/pages/hugo">https://gitlab.com/pages/hugo</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># .gitlab-ci.yml</span>
+<span style="color:#75715e"># All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry</span>
+<span style="color:#f92672">image</span>: <span style="color:#ae81ff">registry.gitlab.com/pages/hugo/hugo_extended:latest </span> <span style="color:#75715e"># use hugo_extened, depending on the theme used</span>
+
+<span style="color:#f92672">variables</span>:
+  <span style="color:#f92672">GIT_SUBMODULE_STRATEGY</span>: <span style="color:#ae81ff">recursive</span>
+
+<span style="color:#f92672">test</span>:
+  <span style="color:#f92672">before_script</span>:
+  - <span style="color:#ae81ff">apk add --update --no-cache git</span>
+  <span style="color:#f92672">script</span>:
+  - <span style="color:#ae81ff">hugo</span>
+  <span style="color:#f92672">except</span>:
+  - <span style="color:#ae81ff">master</span>
+
+<span style="color:#f92672">pages</span>:
+  <span style="color:#f92672">before_script</span>:
+  - <span style="color:#ae81ff">apk add --update --no-cache git</span> <span style="color:#75715e"># absent in example</span>
+  <span style="color:#f92672">script</span>:
+  - <span style="color:#ae81ff">hugo</span>
+  <span style="color:#f92672">artifacts</span>:
+    <span style="color:#f92672">paths</span>:
+    - <span style="color:#ae81ff">public</span>
+  <span style="color:#f92672">only</span>:
+  - <span style="color:#ae81ff">master</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/wineinlib/wineinlib.github.io/commit/453c2b56a9b4fb00b280c0bfbac57fae22223c89" title='Last modified by wineinlib | January 13, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>January 13, 2022</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments"><script src="https://utteranc.es/client.js"
+        repo="wineinlib/wineinlib.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#generate-static-website-using-hugo">Generate static website using Hugo</a>
+      <ul>
+        <li><a href="#prepare-hugo">prepare Hugo</a></li>
+        <li><a href="#create-repo-and-add-theme">create repo and add theme</a></li>
+        <li><a href="#configuration">configuration</a></li>
+        <li><a href="#generate-static-site-code">generate static site code</a></li>
+        <li><a href="#issues">issues</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy-website-with-github-pages">Deploy website with Github Pages</a></li>
+    <li><a href="#deploy-website-with-gitlab-pages">Deploy website with Gitlab Pages</a>
+      <ul>
+        <li><a href="#configuration-1">configuration</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

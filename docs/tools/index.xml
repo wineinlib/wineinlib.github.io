@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on et cetera</title>
+    <link>https://wineinlib.github.io/docs/tools/</link>
+    <description>Recent content in Tools on et cetera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://wineinlib.github.io/docs/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://wineinlib.github.io/docs/tools/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/tools/git/</guid>
+      <description>submodule #  # add submodule git submodule add https://github.com/wineinlib/wineinlib.github.io.git public # sync git submodule update --init --recursive # remove rm -rf public rm -rf .git/modules/public git rm --cached public </description>
+    </item>
+    
+    <item>
+      <title>rsync</title>
+      <link>https://wineinlib.github.io/docs/tools/rsync/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/tools/rsync/</guid>
+      <description>user and group mapping #  rsync --numeric-ids --usermap=&amp;#34;0:1000000,10:1000010&amp;#34; --groupmap=&amp;#34;0:1000000,10:1000010&amp;#34; ... rsync over ssh #  rsync -e &amp;#39;ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no&amp;#39; ... </description>
+    </item>
+    
+  </channel>
+</rss>

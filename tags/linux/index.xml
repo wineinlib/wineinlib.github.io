@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on et cetera</title>
+    <link>https://wineinlib.github.io/tags/linux/</link>
+    <description>Recent content in linux on et cetera</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://wineinlib.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux commands</title>
+      <link>https://wineinlib.github.io/docs/linux/commands/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/linux/commands/</guid>
+      <description>ssh #  # specify port ssh -p 2200 scp #  sshpass #  </description>
+    </item>
+    
+    <item>
+      <title>linux notes</title>
+      <link>https://wineinlib.github.io/docs/linux/linux-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wineinlib.github.io/docs/linux/linux-notes/</guid>
+      <description>init system #  Ubuntu: use Systemd as default since 15.04 use upstart before
+# check init system used if which systemctl &amp;amp;&amp;gt;/dev/null then echo &amp;#34;init system: systemd&amp;#34; elif [[ &amp;#34;`ps -p1 | grep systemd &amp;amp;&amp;amp; echo systemd || echo upstart`&amp;#34; = &amp;#34;upstart&amp;#34; ]] then echo &amp;#34;init system: upstart&amp;#34; else echo &amp;#34;init system not supported (upstart and systemd supported)&amp;#34; exit 1 fi systemd #  upstart #  description &amp;quot;my-app&amp;quot;respawnconsole outputchdir ${app-dir}exec ${app-dir}/my-app --port=${port}</description>
+    </item>
+    
+  </channel>
+</rss>
